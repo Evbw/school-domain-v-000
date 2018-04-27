@@ -1,3 +1,5 @@
+require 'pry'
+
 class School
   attr_accessor :student, :roster
   
@@ -14,7 +16,7 @@ class School
   def grade(grade)
     roster[grade]
   end
-  
+
   def sort
   roster.each do |k, v|
     roster[k] = v.sort{ |a,b| a[0]<=>b[0] }
